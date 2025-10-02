@@ -19,7 +19,7 @@ async function receiveOrders() {
   const conn = await amqp.connect("amqp://mikelopster:password@localhost:5672");
     // สร้าง channel
   const channel = await conn.createChannel();
-
+  const x =123123;
   const queue = "orders-new";
   await channel.assertQueue(queue, { durable: true });
   channel.prefetch(1); // รับ message ทีละ 1 ตัว
