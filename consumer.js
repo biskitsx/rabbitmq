@@ -19,6 +19,7 @@ async function receiveOrders() {
   const conn = await amqp.connect("amqp://mikelopster:password@localhost:5672");
     // สร้าง channel
   const channel = await conn.createChannel();
+  const x= 1233;
 
   const queue = "orders-new";
   await channel.assertQueue(queue, { durable: true });
