@@ -24,7 +24,7 @@ async function receiveOrders() {
   await channel.assertQueue(queue, { durable: true });
   channel.prefetch(1); // รับ message ทีละ 1 ตัว
 
-  let counter = 0;
+  let counter = 1;
 
   channel.consume(queue, async (msg) => {
     try {
