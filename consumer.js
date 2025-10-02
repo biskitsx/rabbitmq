@@ -20,6 +20,7 @@ async function receiveOrders() {
     // สร้าง channel
   const channel = await conn.createChannel();
 
+  const queuex = "orders-new";
   const queue = "orders-new";
   await channel.assertQueue(queue, { durable: true });
   channel.prefetch(1); // รับ message ทีละ 1 ตัว
