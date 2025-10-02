@@ -6,7 +6,6 @@ async function sendOrder(order) {
   const channel = await connection.createChannel();
 
   const queue = "orders-new";
-  const magicNumber = 12;
   // เขียนลง disk เอาไว้ กรณีที่ queue ดับ
   await channel.assertQueue(queue, { durable: true });
 
