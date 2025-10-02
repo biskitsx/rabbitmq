@@ -17,7 +17,7 @@ async function sendOrder(order) {
   setTimeout(() => {
     connection.close();
     process.exit(0);
-  }, 500);
+  }, 400);
 }
 
 for (let i = 0; i < 50; i++) {
