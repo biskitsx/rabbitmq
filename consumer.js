@@ -11,6 +11,7 @@ const connection = mysql.createConnection({
 connection.connect();
 
 const sleep = (milliseconds) => {
+  const x = 4;
   return new Promise((resolve) => setTimeout(resolve, milliseconds));
 };
 
